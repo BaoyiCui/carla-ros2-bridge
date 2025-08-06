@@ -2,17 +2,18 @@
 
 The `carla_ros_bridge` package is the main package needed to run the basic ROS bridge functionality. In this section you will learn how to prepare the ROS environment, run the ROS bridge, how to configure the settings, usage of synchronous mode, controlling the ego vehicle and a summary of the subscriptions, publications and services available.
 
-- [__Setting the ROS environment__](#setting-the-ros-environment)
-    - [Prepare ROS 1 environment](#prepare-ros-1-environment)
-    - [Prepare ROS 2 environment](#prepare-ros-2-environment)
-- [__Running the ROS bridge__](#running-the-ros-bridge)
-- [__Configuring CARLA settings__](#configuring-carla-settings)
-- [__Using the ROS bridge in synchronous mode__](#using-the-ros-bridge-in-synchronous-mode)
-- [__Ego vehicle control__](#ego-vehicle-control)
-- [__ROS API__](#ros-api)
-    - [Subscriptions](#subscriptions)
-    - [Publications](#publications)
-    - [Services](#services)
+- [The ROS Bridge package](#the-ros-bridge-package)
+  - [Setting the ROS environment](#setting-the-ros-environment)
+      - [Prepare ROS 1 environment:](#prepare-ros-1-environment)
+      - [Prepare ROS 2 environment:](#prepare-ros-2-environment)
+  - [Running the ROS bridge](#running-the-ros-bridge)
+  - [Configuring CARLA settings](#configuring-carla-settings)
+  - [Using the ROS bridge in synchronous mode](#using-the-ros-bridge-in-synchronous-mode)
+  - [Ego vehicle control](#ego-vehicle-control)
+  - [ROS API](#ros-api)
+      - [Subscriptions](#subscriptions)
+      - [Publications](#publications)
+      - [Services](#services)
 ---
 
 ## Setting the ROS environment
@@ -76,7 +77,7 @@ The following settings are available:
 *  __synchronous_mode_wait_for_vehicle_control_command__: In synchronous mode, pauses the tick until a vehicle control is completed.
 *  __fixed_delta_seconds__: Simulation time (delta seconds) between simulation steps. __It must be lower than 0.1__. Take a look at the [documentation](https://carla.readthedocs.io/en/latest/adv_synchrony_timestep/) to learn more about this.
 *  __ego_vehicle__: Role names to identify ego vehicles. Relevant topics will be created so these vehicles will be able to be controlled from ROS.
-* __town__: Either use an available CARLA town (eg. 'town01') or an OpenDRIVE file (ending in `.xodr`).
+* __town__: Either use an available CARLA town (eg. 'Carla/Maps/Town10HD_Opt') or an OpenDRIVE file (ending in `.xodr`).
 *  __register_all_sensors__:
 	*  __If false__: Only sensors spawned by the bridge are registered.
 	*  __If true (default)__: All the sensors present in the simulation are registered.
